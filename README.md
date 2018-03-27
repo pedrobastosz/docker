@@ -23,10 +23,13 @@ Move those files to `weblogic/10.3.6/` and/or `weblogic-base-domain/10.3.6/`
 $ cd weblogic/10.3.6
 $ sudo docker build -t $YOURNAME/weblogic:10.3.6 .
 
-OR 
+AND
 
 $ cd weblogic-base-domain/10.3.6
 $ sudo docker build -t $YOURNAME/weblogic-base-domain:10.3.6 .
+
+the weblogic-base-domain:10.3.6 image dependes on $YOURNAME/weblogic:10.3.6 previous build imagge.
+
 ```
 
 For more information read the `Dockerfile` in those directory.
