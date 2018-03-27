@@ -1,0 +1,1 @@
+docker run -i -t -p 7001:7001 pedrobastosz/weblogic-base-domain:10.3.6

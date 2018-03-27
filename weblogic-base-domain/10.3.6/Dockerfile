@@ -21,7 +21,7 @@
 
 # Pull base image
 # ---------------
-FROM gibaholms/weblogic:10.3.6
+FROM pedrobastosz/weblogic:10.3.6
 
 # Maintainer
 # ----------
