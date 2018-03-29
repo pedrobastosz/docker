@@ -38,14 +38,16 @@ For support and information, please consult the documentation for each image or 
 
 # WLST Automations
 
-
-create container from image with shared volume:
+Create container from image with shared volume:
 ```
 docker run -it -p 7001:7001 -v ./wslt-scripts:/wslt-scripts --name=weblogic-base-domain pedrobastosz/weblogic-base-domain:10.3.6
+```
 
 To exec bash inside container and iterate with shell:
+
 ```
 docker exec -i -t weblogic-base-domain /bin/bash
+```
 
 Exec
 ```
