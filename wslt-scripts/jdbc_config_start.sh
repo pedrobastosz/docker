@@ -1,0 +1,1 @@
+wlst.sh jdbc_config.py jdbc_config.properties
