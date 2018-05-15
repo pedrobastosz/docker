@@ -82,9 +82,9 @@ try:
                 print 'Configurando ds ' + str(l)
                 jd_name=configProps.get("ds_name"+ str(l))
                 jd_jndi=configProps.get("ds_jndi"+ str(l))
-                jd_url=configProps.get("ds_url"+ str(l))
-                jd_usr=configProps.get("ds_user"+ str(l))
-                jd_pwd=configProps.get("ds_pwd"+ str(l))
+                jd_url=configProps.get("ds_url")
+                jd_usr=configProps.get("ds_user")
+                jd_pwd=configProps.get("ds_pwd")
                 trg = configProps.get("target_name")
                 createJDBCDS(jd_name,jd_jndi,jd_url,jd_usr,jd_pwd,trg)
                 l = l+1
@@ -92,10 +92,12 @@ try:
         print 'Passou while'
         save()
         print 'Passou save'
-        activate(block="true")     
-        print 'DataSource ' + l + ' configurado.'
+        activate(block="false")     
+        #print 'DataSources ' + l + ' configurados.'
 except Exception:
         print 'Erro ao configurar dataSources: '
+        activate(block="false")
 
+print "VAI DESCONECTAR"
 disconnect()
 ##############################################################################################
